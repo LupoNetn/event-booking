@@ -36,45 +36,7 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">MEI Events</h1>
-                <p className="text-xs text-gray-500">University Event Platform</p>
-              </div>
-            </Link>
-            <nav className="hidden md:flex items-center space-x-6">
-              <Link href="/events" className="text-gray-600 hover:text-blue-600 transition-colors">
-                Events
-              </Link>
-              <Link href="/dashboard" className="text-gray-600 hover:text-blue-600 transition-colors">
-                My Bookings
-              </Link>
-              <Link href="/about" className="text-blue-600 font-medium">
-                About
-              </Link>
-            </nav>
-            <div className="flex items-center space-x-3">
-              <Button variant="ghost" size="sm">
-                Sign In
-              </Button>
-              <Button
-                size="sm"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-              >
-                Sign Up
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
-
+      
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">

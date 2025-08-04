@@ -1,9 +1,13 @@
+'use client'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Calendar, MapPin, Users, Star, ArrowRight, Search } from "lucide-react"
+import { Calendar, MapPin, Users, Star, ArrowRight, Search, SquareMenu, X} from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import {useState} from "react"
+import {Sheet,SheetClose,SheetContent,SheetDescription} from "@/components/ui/sheet"
+
 
 export default function HomePage() {
   const featuredEvents = [
@@ -45,47 +49,11 @@ export default function HomePage() {
     },
   ]
 
+  const [isOpen, setIsOpen] = useState(true)
+  const [openSheet,setOpenSheet] = useState(false)
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">M</span>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">MEI Events</h1>
-                <p className="text-xs text-gray-500">University Event Platform</p>
-              </div>
-            </div>
-            <nav className="hidden md:flex items-center space-x-6">
-              <Link href="/events" className="text-gray-600 hover:text-blue-600 transition-colors">
-                Events
-              </Link>
-              <Link href="/dashboard" className="text-gray-600 hover:text-blue-600 transition-colors">
-                My Bookings
-              </Link>
-              <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
-                About
-              </Link>
-            </nav>
-            <div className="flex items-center space-x-3">
-              <Button variant="ghost" size="sm">
-                Sign In
-              </Button>
-              <Button
-                size="sm"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-              >
-                Sign Up
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
